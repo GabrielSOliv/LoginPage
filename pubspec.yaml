@@ -54,7 +54,7 @@ dev_dependencies:
 flutter:
   uses-material-design: true
   assets:
-    - img/loginimg.png
+    - img/
 
   #   - images/a_dot_ham.jpeg
 
