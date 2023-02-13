@@ -1,3 +1,4 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -124,21 +125,6 @@ class SignUpPage extends StatelessWidget {
 
                 )
             ),
-            Padding(
-              padding: EdgeInsets.fromLTRB(0,0,30,0),
-              child: Row(
-                children: [
-                  Expanded(child: Container(),),
-                  Text(
-                      "Eu já tenho uma conta",
-                      style: TextStyle(
-                        fontSize: 16,
-                        color: Colors.grey,
-                      ),
-                  ),
-                ],
-              ),
-            ),
             SizedBox(height: 70,),
             Container(
               width: widthCell*0.5,
@@ -163,6 +149,15 @@ class SignUpPage extends StatelessWidget {
                 ),
               ),
             ),
+            SizedBox(height: 10,),
+            RichText(text: TextSpan(
+              recognizer: TapGestureRecognizer()..onTap=()=>Get.back(),
+              text: "Já tem uma conta?",
+              style: TextStyle(
+                fontSize: 20,
+                color: Colors.grey[500],
+              )
+            )),
             SizedBox(height: widthCell*0.2,),
             RichText(text: TextSpan(
                 text: "Se inscreva usando algum desses metodos",
